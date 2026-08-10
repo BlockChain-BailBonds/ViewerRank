@@ -1,0 +1,28 @@
+research:
+  version: "0.2.0"
+  horizons_hours: [1, 24, 168, 720, 2160]
+  causal:
+    max_inverse_propensity_weight: 20.0
+    estimator: "doubly_robust"
+  temporal:
+    curator_half_life_days: 90.0
+    global_half_life_days: 180.0
+    max_short_term_weight: 0.70
+  exploration:
+    policy: "upper_confidence_bound"
+    beta: 0.25
+  calibration:
+    bins: 10
+  benchmark:
+    primary_metric: "future_quality_ndcg_at_k"
+    secondary_metrics:
+      - "hidden_gem_recall_at_k"
+      - "future_quality_lift_at_k"
+      - "expected_calibration_error"
+      - "curator_alpha_dr"
+    k_values: [10, 50, 100]
+  ablations:
+    - "without_causal_correction"
+    - "without_curator_signal"
+    - "without_temporal_state"
+    - "without_uncertainty_exploration"
