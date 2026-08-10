@@ -1,8 +1,8 @@
 from __future__ import annotations
 
+from collections.abc import Mapping
 from dataclasses import dataclass
 from math import exp, log
-from typing import Mapping
 
 
 DEFAULT_WEIGHTS: dict[str, float] = {
@@ -101,7 +101,7 @@ class ViewerComponents:
     confidence: float
     fraud_penalty: float = 0.0
 
-    def normalized(self) -> "ViewerComponents":
+    def normalized(self) -> ViewerComponents:
         return ViewerComponents(
             taste=clamp01(self.taste),
             discovery=clamp01(self.discovery),
