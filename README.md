@@ -2,6 +2,12 @@
 
 ViewerRank is a production-oriented human curator ranking system for measuring which viewers consistently identify high-quality videos, consume them meaningfully, discover them early, and do so with statistically credible behavior.
 
+## Live dashboard
+
+GitHub Pages dashboard: **https://blockchain-bailbonds.github.io/ViewerRank/**
+
+The dashboard redeploys automatically when the site changes on `main` and refreshes public repository, pull-request, commit, and GitHub Actions data in the browser every 10 minutes.
+
 ## Core idea
 
 ViewerRank separates popularity from quality and treats meaningful video selection as an implicit prediction. It records immutable exposure-time snapshots, waits for future quality to mature, and then scores whether a viewer repeatedly selected content that later proved unusually valuable relative to what their feed already exposed them to.
@@ -18,8 +24,9 @@ The starter implementation includes deterministic scoring, Bayesian confidence s
 src/viewerrank/          scoring and API implementation
 config/                  versioned scoring configuration
 db/                      PostgreSQL schema
+site/                    live GitHub Pages dashboard
 tests/                   unit tests
-.github/workflows/       CI
+.github/workflows/       CI and Pages deployment
 ```
 
 ## Quick start
