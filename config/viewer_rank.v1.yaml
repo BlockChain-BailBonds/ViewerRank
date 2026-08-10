@@ -1,0 +1,26 @@
+viewer_rank:
+  version: "1.0.0"
+  weights:
+    taste: 0.35
+    discovery: 0.25
+    depth: 0.15
+    reliability: 0.10
+    breadth: 0.05
+    influence: 0.10
+  maturation:
+    horizons_days: [1, 7, 30, 90]
+  decay:
+    global_half_life_days: 180
+    topic_half_life_days: 90
+  bayesian:
+    video_prior_strength: 100
+    viewer_prior_strength: 50
+  discovery:
+    popularity_exponent: 1.5
+  fraud:
+    minimum_trust_weight: 0.05
+    maximum_single_video_contribution: 0.02
+  recursive_curator_signal:
+    beta_max: 0.10
+  public_profile:
+    opt_in_required: true
