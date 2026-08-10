@@ -4,7 +4,6 @@ from collections.abc import Mapping
 from dataclasses import dataclass
 from math import exp, log
 
-
 DEFAULT_WEIGHTS: dict[str, float] = {
     "taste": 0.35,
     "discovery": 0.25,
