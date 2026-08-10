@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ViewerRank live research and repository dashboard">
+  <meta name="theme-color" content="#070b14">
+  <title>ViewerRank — Live Research Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="grid-bg"></div>
+  <header class="nav shell">
+    <a class="brand" href="#top" aria-label="ViewerRank home">
+      <span class="brand-mark">VR</span>
+      <span>ViewerRank</span>
+    </a>
+    <nav>
+      <a href="#research">Research</a>
+      <a href="#activity">Activity</a>
+      <a href="https://github.com/BlockChain-BailBonds/ViewerRank" target="_blank" rel="noreferrer">GitHub ↗</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero shell">
+      <div class="eyebrow"><span class="pulse"></span> LIVE RESEARCH SYSTEM</div>
+      <h1>Measure who discovers<br><span>valuable content first.</span></h1>
+      <p class="lede">ViewerRank models human curation as a causal forecasting signal: who consistently identifies content that later proves unusually valuable, before popularity makes the answer obvious.</p>
+      <div class="hero-actions">
+        <a class="button primary" href="https://github.com/BlockChain-BailBonds/ViewerRank" target="_blank" rel="noreferrer">View repository</a>
+        <button class="button secondary" id="refreshButton" type="button">Refresh live data</button>
+      </div>
+      <div class="sync-line">Last synced <strong id="lastUpdated">—</strong> · auto-refresh every 10 minutes · API remaining <strong id="rateLimit">—</strong></div>
+    </section>
+
+    <section class="shell stats" aria-label="Live repository statistics">
+      <article class="stat-card"><span>Stars</span><strong id="stars">—</strong><small>repository</small></article>
+      <article class="stat-card"><span>Forks</span><strong id="forks">—</strong><small>network</small></article>
+      <article class="stat-card"><span>Open PRs</span><strong id="openPrs">—</strong><small>active work</small></article>
+      <article class="stat-card"><span>CI</span><strong id="ciStatus" class="status-text">—</strong><small id="ciDetail">latest workflow</small></article>
+    </section>
+
+    <section id="research" class="shell section">
+      <div class="section-heading">
+        <div><span class="kicker">RESEARCH CORE</span><h2>From ranking score to causal intelligence.</h2></div>
+        <p>The production path separates popularity, preference and quality, then measures the incremental information supplied by curator behavior.</p>
+      </div>
+
+      <div class="research-grid">
+        <article class="research-card accent">
+          <span class="index">01</span>
+          <h3>Causal curator alpha</h3>
+          <p>Correct exposure bias with inverse propensity and doubly robust estimators.</p>
+          <code>αᵤ = E[Qfuture − Qexpected | exposure]</code>
+        </article>
+        <article class="research-card">
+          <span class="index">02</span>
+          <h3>Temporal curator state</h3>
+          <p>Track changing topic expertise and discovery skill instead of freezing reputation.</p>
+          <code>zᵤ(t) = TemporalEncode(G&lt;t, u)</code>
+        </article>
+        <article class="research-card">
+          <span class="index">03</span>
+          <h3>Future quality forecasting</h3>
+          <p>Predict multi-horizon quality at 1h, 24h, 7d, 30d and 90d without future leakage.</p>
+          <code>FVM(v,t,H) → Q̂v,t+H</code>
+        </article>
+        <article class="research-card">
+          <span class="index">04</span>
+          <h3>Hidden-gem benchmark</h3>
+          <p>Score whether the system surfaces eventual high-quality items while they are still obscure.</p>
+          <code>HiddenGemRecall@K</code>
+        </article>
+        <article class="research-card">
+          <span class="index">05</span>
+          <h3>Calibration + uncertainty</h3>
+          <p>Use calibrated probabilities and controlled uncertainty-driven exploration.</p>
+          <code>score = E[Q] + βσ</code>
+        </article>
+        <article class="research-card">
+          <span class="index">06</span>
+          <h3>Curator information gain</h3>
+          <p>Measure how much observing a curator reduces uncertainty about future value.</p>
+          <code>IG = H(Q) − H(Q | curator)</code>
+        </article>
+      </div>
+    </section>
+
+    <section id="activity" class="shell section activity-layout">
+      <div class="panel">
+        <div class="panel-head"><div><span class="kicker">LATEST ACTIVITY</span><h2>Commits</h2></div><a href="https://github.com/BlockChain-BailBonds/ViewerRank/commits/main" target="_blank" rel="noreferrer">All commits ↗</a></div>
+        <div id="commits" class="feed"><div class="loading">Loading commit history…</div></div>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><div><span class="kicker">DEVELOPMENT</span><h2>Open pull requests</h2></div><a href="https://github.com/BlockChain-BailBonds/ViewerRank/pulls" target="_blank" rel="noreferrer">All PRs ↗</a></div>
+        <div id="pulls" class="feed"><div class="loading">Loading pull requests…</div></div>
+      </div>
+    </section>
+
+    <section class="shell section thesis">
+      <span class="kicker">CORE THESIS</span>
+      <blockquote>“A strong curator is a human whose behavior provides unusually high causal information about future content value.”</blockquote>
+      <div class="formula">ViewerRank = Information Gain × Causal Independence × Reliability</div>
+    </section>
+  </main>
+
+  <footer class="shell footer">
+    <div><strong>ViewerRank</strong><br><span>Research + production system</span></div>
+    <div class="ip">Intellectual property notice: Mathew Blake Ward · © 2026 · All rights reserved.</div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
