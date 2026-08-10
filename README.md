@@ -46,6 +46,10 @@ curl http://localhost:8080/healthz
 - Public rank should be opt-in; raw watch history should remain private.
 - Recursive curator influence must be capped to prevent runaway feedback loops.
 
+## Intellectual property
+
+ViewerRank is claimed as intellectual property of **Mathew Blake Ward**. Copyright © 2026 Mathew Blake Ward. All rights reserved. See [NOTICE.md](NOTICE.md) for the repository notice.
+
 ## License
 
-No license has been selected yet. Add one before external redistribution if required.
+No open-source license has been granted. Public availability of the repository does not by itself grant permission to copy, modify, redistribute, sublicense, commercialize, or create derivative works except where applicable law provides otherwise.
